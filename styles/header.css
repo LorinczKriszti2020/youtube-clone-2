@@ -1,0 +1,252 @@
+.header{
+  display: flex;
+  flex-direction: row;
+  height: 55px;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(189, 189, 189);
+  z-index: 2000;
+}
+
+.left-section{
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-menu{
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.youtube-logo{
+  height: 24px;
+}
+
+.middle-section{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar{
+  border-width: 1px;
+  height: 36px;
+  border-color: rgb(192, 192, 192);
+  padding-left: 15px;
+  border-style: solid;
+  flex: 1;
+  max-width: 300px;
+  width: 0;
+  font-size: 16px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  border-top-left-radius: 300px;
+  border-bottom-left-radius: 300px;
+}
+
+.search-bar::placeholder{
+  font-size: 16px;
+  font-family: roboto;
+}
+
+.search-bar:focus{
+  outline: none;
+}
+
+.search-button{
+  height: 40px;
+  width: 64px;
+  border-width: 1px;
+  margin-right: 10px;
+  margin-left: -2px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  background-color: rgb(240, 240, 240);
+  border-radius: 2px;
+  border-top-right-radius: 300px;
+  border-bottom-right-radius: 300px;
+}
+
+.search-button,
+.voice-search-button,
+.container,
+.notifications-icon-countainer{
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.container .tooltip,
+.notifications-icon-countainer .tooltip{
+  position: absolute;
+  font-family: Roboto, Arial;
+  background-color: gray;
+  color: white;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 13px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.container:hover .tooltip,
+.notifications-icon-countainer:hover .tooltip{
+  opacity: 1;
+}
+
+.search-button:hover,
+.voice-search-button:hover{
+  background-color: rgb(230, 230, 230);
+}
+
+.search-icon,
+.voice-search-icon{
+  height: 25px;
+  margin-top: 4px;
+}
+
+.voice-search-button{
+  height: 44px;
+  width: 44px;
+  border: none;
+  border-radius: 22px;
+  background-color: rgb(240, 240, 240);
+}
+
+.voice-search-button .tooltip{
+  white-space: nowrap;
+  bottom: -27px;
+}
+
+.right-section{
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.container{
+  position: relative;
+}
+
+
+.container .tooltip,
+.notifications-icon-countainer .tooltip{
+  white-space: nowrap;
+  bottom: -33px;
+}
+
+.upload-icon,
+.youtube-apps-icon,
+.notifications-icon{
+  height: 30px;
+}
+
+.my-channel{
+  height: 32px;
+  width: 32px;
+  border-radius: 20px;
+}
+
+
+.login-button{
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(189, 189, 189);
+  cursor: pointer;
+}
+
+.notifications-icon-countainer{
+  position: relative;
+}
+
+.notifications-count{
+  position: absolute;
+  font-family: roboto, Arial;
+  font-weight: 500;
+  background-color: rgb(197, 2, 2);
+  color: white;
+  font-size: 12px;
+  top: -5px;
+  right: -5px;
+  padding: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 10px;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.dropdown{
+  position: absolute;
+  top: 50px;
+  left: -150px;
+  right: 0;
+  border: 1px rgb(189, 189, 189) solid;
+  border-radius: 4px;
+  background-color: rgb(248, 248, 248);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.dropdown.down{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.channel-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4px;
+  border-bottom: 1px black solid;
+  margin-bottom: 4px;
+  left: 0;
+  right: 0;
+}
+
+.dropdown-button{
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(248, 248, 248);
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-button:hover{
+  background-color: rgb(240, 240, 240);
+}

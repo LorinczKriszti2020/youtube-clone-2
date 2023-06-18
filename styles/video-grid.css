@@ -1,0 +1,152 @@
+.video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 50px;
+  margin: 0;
+}
+
+@media (max-width: 1000px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 1001px) and (min-width: 1499px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+@media (min-width: 1500px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+}
+
+.thumbnail-container{
+  position: relative;
+}
+
+.thumbnail{
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+
+.time{
+  position: absolute;
+  font-family: Roboto, Arial;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 4px;
+  border-radius: 2px;
+  bottom: 17px;
+  right: 8px
+}
+
+.video-info-grid{
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+}
+
+.channel-picture-container{
+  position: relative;
+}
+
+.channel-picture-container .tooltip{
+  position: absolute;
+  display: flex;
+  left: 3px;
+  bottom: -60px;
+  width: 300px;
+  background-color: white;
+  vertical-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgb(172, 172, 172);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  z-index: 100;
+}
+
+.channel-picture-container:hover .tooltip{
+  opacity: 1;
+}
+
+.tooltip .stats{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tooltip-channel-picture-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip-channel-picture-container .channel-picture{
+  width: 60px;
+  height: 60px;
+}
+
+.tooltip .channel-name{
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.tooltip .tooltip-subscribers{
+  color: rgb(65, 65, 65);
+}
+
+.channel-picture{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.video-info{
+  flex: 1;
+}
+
+.video-title{
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.channel-name,
+.video-stats{
+  font-size: 14px;
+  color: grey;
+}
+
+.channel-name{
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+@media (min-width: 1000px){
+  .video-title{
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .channel-name,
+  .video-stats{
+    font-size: 16px;
+  }
+}

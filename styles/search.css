@@ -1,0 +1,44 @@
+.recommended{
+  height: 150px;
+  display: flex;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(189, 189, 189);
+}
+
+.recom-thumbnail-container{
+  height: 100%;
+  display: flex;
+  position: relative;
+  width: 267px;
+}
+
+.recom-title{
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 22px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: black;
+}
+
+.recom-channel-name{
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 4px;
+}
+
+.missing-vid{
+  margin-top: 100px;
+  font-size: 2rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+.middle-section{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
